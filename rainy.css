@@ -1,0 +1,141 @@
+html {
+  color: #222;
+  line-height: 1.4;
+}
+
+body {
+  background-image: url("/image/mơ-thấy-trời-mưa.jpg");
+
+  display: block;
+
+  background-position: center;
+  background-position-x: center;
+  background-position-y: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+
+  font-size: 20px;
+  color: #fff;
+
+  height: 100%;
+  margin: 0;
+}
+
+.center-container {
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  overflow: visible;
+}
+
+h1 {
+  font-family: "marcellus_scregular", serif;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.55);
+}
+
+div {
+  display: block;
+}
+
+.center-container :after {
+  content: "";
+  height: 100%;
+  margin-left: -0.25em;
+}
+
+.center-container :after,
+.center-block {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.center-block {
+  max-width: 98%;
+}
+
+p {
+  display: block;
+
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+#audioplayerskin {
+  width: 300px;
+  height: auto;
+  margin: auto auto 20px auto;
+
+  text-align: center;
+
+  background-color: transparent;
+}
+
+#pbutton {
+  height: 130px;
+  width: 130px;
+  border: none;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  outline: none;
+}
+
+#volume-control {
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width: 50%;
+}
+
+.play {
+  background: url("https://rainymood.com/i/play4.png");
+  border-radius: 50%;
+
+  animation: animate 5s linear infinite;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: animate;
+
+  cursor: pointer;
+}
+.pause {
+  background: url("https://rainymood.com/i/pause4.png");
+  border-radius: 50%;
+
+  animation: animate 5s linear 1;
+  cursor: pointer;
+}
+audio {
+  width: 300px;
+  height: 54px;
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.15);
+  }
+  40% {
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
+  }
+  80% {
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-685453-6", "rainymood.com");
+      ga("set", "anonymizeIp", true); // anonymizes the IP address for privacy
+      ga("set", "allowAdFeatures", false); // don't allow data collection
+      ga("send", "pageview");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood@</title>
+    <meta property="og:url" content="wedsite" />
+    <link rel="stylesheet" type="text/css" href="rainy.css" />
+  </head>
+
+  <body>
+    <style>
+      @font-face {
+        font-family: "marcellus_scregular";
+        src: url("/css/marcellussc-regular-webfont.eot");
+        src: url("/css/marcellussc-regular-webfont.eot?#iefix")
+            format("embedded-opentype"),
+          url("/css/marcellussc-regular-webfont.woff2") format("woff2"),
+          url("/css/marcellussc-regular-webfont.woff") format("woff"),
+          url("/css/marcellussc-regular-webfont.ttf") format("truetype"),
+          url("/css/marcellussc-regular-webfont.svg#marcellus_scregular")
+            format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
+      h1 {
+        font-size: 70px;
+        line-height: 70px;
+        margin: 0;
+        cursor: default;
+
+        display: block;
+        font-weight: bold;
+      }
+    </style>
+    <div class="center-container">
+      <div class="center-block">
+        <div id="audioplayerskin">
+          <button id="pbutton" class="play" onclick="playAudio();"></button>
+
+          <div id="volume-control">
+            <input
+              type="range"
+              oninput="Setvolume(this.value)"
+              onchange="Setvolume(this.value)"
+              id="rngvolume"
+              min="0"
+              max="1"
+              step="0.01"
+              value="1"
+            />
+          </div>
+        </div>
+
+        <audio id="audioplayer" loop="loop">
+          <source src="Music mp3/Tiengmuaroi.ogg" type="audio/ogg" />
+        </audio>
+        <h1>Rainy Mood !</h1>
+        <p>Rain Sounds for Sleep &amp; Study</p>
+        <script>
+          var music = document.getElementById("audioplayer");
+          function playAudio() {
+            if (music.paused) {
+              music.play();
+              pbutton.className = "";
+              pbutton.className = "pause";
+
+              /* Tell Analytics about long  Session */
+              var anc = false;
+              window.setInterval(function () {
+                if (!anc) {
+                  ga("send", "event", "longSession15", "longSession15");
+                  anc = true;
+                }
+              }, 900000);
+            } else {
+              music.pause();
+              pbutton.className = "";
+              pbutton.className = "play";
+            }
+          }
+          function setVolume(volume) {
+            music.volume = volume;
+          }
+        </script>
+        <p>
+          <a
+            href="https://www.facebook.com/profile.php?id=100009210749909"
+            target="_blank"
+          >
+            <img
+              src="https://rainymood.com/i/icons/facebook/facebook-48a.png"
+              alt="facebook"
+            />
+          </a>
+          <a
+            href="https:/www.instagram.com/p/CCjP-1Mpl6MicODx6a1JS513sO0jxY9hUpsm180/"
+            target="_blank"
+          >
+            <img
+              src="https://rainymood.com/i/icons/instagram/instagram-48a.png"
+              alt="instagram"
+            />
+          </a>
+        </p>
+        <p>"Made By:Minh Hai"</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mood3</title>
+    <link rel="stylesheet" type="text/css" href="foutain.css" />
+  </head>
+  <body>
+    <div class="center-container3">
+      <div class="center-block3">
+        <div id="audioplayerskin3">
+          <button id="qbutton" class="playq" onclick="playAudio();"></button>
+
+          <div id="volume-control3">
+            <input
+              type="range"
+              oninput="Setvolume(this.value)"
+              onchange="Setvolume(this.value)"
+              id="rngvolume"
+              min="0"
+              max="1"
+              step="0.01"
+            />
+          </div>
+        </div>
+
+        <audio id="audioplayer3" loop="loop" auto >
+            <source src="Music mp3/ieng-suoi-chay-www_nhacchuongvui_com.ogg" type="audio/ogg" />
+        </audio>
+        <h1> Foutain Sounds</h1>
+        <p>Foutain Sound for Relax and sleep </p>
+        <p> Made By :Minh Hai </p>
+      </div>
+    </div>
+  </body>
+</html>

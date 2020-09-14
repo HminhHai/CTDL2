@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fireSound</title>
+    <link rel="stylesheet" type="text/css" href="fireSound.css" />
+  </head>
+  <body>
+    <style>
+      @font-face {
+        font-family: "marcellus_scregular";
+        src: url("/css/marcellussc-regular-webfont.eot");
+        src: url("/css/marcellussc-regular-webfont.eot?#iefix")
+            format("embedded-opentype"),
+          url("/css/marcellussc-regular-webfont.woff2") format("woff2"),
+          url("/css/marcellussc-regular-webfont.woff") format("woff"),
+          url("/css/marcellussc-regular-webfont.ttf") format("truetype"),
+          url("/css/marcellussc-regular-webfont.svg#marcellus_scregular")
+            format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <div class="center-container2">
+      <div class="center-block2">
+        <div id="audioplayerskin2">
+          <button id="fbutton" class="plays" onclick="playAudio();"></button>
+          <div id="volume-control2">
+            <input
+              type="range"
+              oninput="Setvolume(this.value)"
+              onchange="Setvolume(this.value)"
+              id="rngvolume"
+              min="0"
+              max="1"
+              step="0.01"
+              value="1"
+            />
+          </div>
+        </div>
+        <audio id="audioplayer2" loop="loop" autoplay>
+          <source
+            src="Music mp3/Lua-Chay-Am-thanh-tu-nhien.ogg"
+            type="audio/ogg"
+          />
+        </audio>
+        <h1>Fire Mood !</h1>
+        <p>Fire SoundS For Relax &amp; Sleep</p>
+        <p>
+          <a
+            href="https://www.facebook.com/profile.php?id=100009210749909"
+            target="_blank"
+          >
+            <img
+              src="https://rainymood.com/i/icons/facebook/facebook-48a.png"
+              alt="facebook"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/p/CCjP-1Mpl6MicODx6a1JS513sO0jxY9hUpsm180/"
+            target="_blank"
+          >
+            <img
+              src="https://rainymood.com/i/icons/instagram/instagram-48a.png"
+              alt="instagram"
+            />
+          </a>
+        </p>
+        <p>
+          "Made By:Minh Hai"
+        </p>
+        <script>
+          var music =document.getElementById('audioplayer2');
+          function playAudio(){
+            if (music.paused){
+              music.play();
+              fbutton.className="";
+              fbutton.className="pauses";
+
+              var anc=false;
+              window.setInterval(function(){
+                if(!anc) {ga('send','event','longSession15','longSession15'); anc=true;}
+              },900000);
+            }
+            else{
+              music.pause();
+              fbutton.className="";
+              fbutton.className="plays";
+            }
+          }
+          function.setVolume(volume){music.volume=volume;}
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
+
